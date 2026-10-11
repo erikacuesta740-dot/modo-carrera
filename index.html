@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0c1220">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Modo Carrera">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icons/icon-180.png">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<title>Modo Carrera Manager</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Source+Sans+3:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<div id="app"><main class="no-tabs"><p>Cargando…</p></main></div>
+<div id="sheet" class="scrim" hidden></div>
+<div id="busy" class="busy" hidden></div>
+<div id="toast" class="toast" hidden></div>
+<!-- build:scripts -->
+<script src="js/core/util.js"></script>
+<script src="js/data/leagues.js"></script>
+<script src="js/data/names.js"></script>
+<script src="js/data/values.js"></script>
+<script src="js/data/real-rosters.js"></script>
+<script src="js/data/rosters/eng2.js"></script>
+<script src="js/data/rosters/esp2.js"></script>
+<script src="js/data/rosters/euro.js"></script>
+<script src="js/data/rosters/fra1.js"></script>
+<script src="js/data/rosters/ger1.js"></script>
+<script src="js/data/rosters/ita1.js"></script>
+<script src="js/data/world/arg1.js"></script>
+<script src="js/data/world/aus1.js"></script>
+<script src="js/data/world/aut1.js"></script>
+<script src="js/data/world/bel1.js"></script>
+<script src="js/data/world/den1.js"></script>
+<script src="js/data/world/eng3.js"></script>
+<script src="js/data/world/eng4.js"></script>
+<script src="js/data/world/fra2.js"></script>
+<script src="js/data/world/ger2.js"></script>
+<script src="js/data/world/ger3.js"></script>
+<script src="js/data/world/irl1.js"></script>
+<script src="js/data/world/ita2.js"></script>
+<script src="js/data/world/kor1.js"></script>
+<script src="js/data/world/ksa1.js"></script>
+<script src="js/data/world/ned1.js"></script>
+<script src="js/data/world/nor1.js"></script>
+<script src="js/data/world/pol1.js"></script>
+<script src="js/data/world/por1.js"></script>
+<script src="js/data/world/rou1.js"></script>
+<script src="js/data/world/sco1.js"></script>
+<script src="js/data/world/sui1.js"></script>
+<script src="js/data/world/swe1.js"></script>
+<script src="js/data/world/tur1.js"></script>
+<script src="js/data/world/usa1.js"></script>
+<script src="js/engine/players.js"></script>
+<script src="js/engine/lineup.js"></script>
+<script src="js/data/generator.js"></script>
+<script src="js/engine/schedule.js"></script>
+<script src="js/engine/match.js"></script>
+<script src="js/engine/comps.js"></script>
+<script src="js/engine/market.js"></script>
+<script src="js/engine/dev.js"></script>
+<script src="js/engine/manager.js"></script>
+<script src="js/engine/life.js"></script>
+<script src="js/engine/career.js"></script>
+<script src="js/engine/online.js"></script>
+<script src="js/store/storage.js"></script>
+<script src="js/store/cloud.js"></script>
+<script src="js/vendor/peerjs.min.js"></script>
+<script src="js/store/online-sync.js"></script>
+<script src="js/store/p2p-rooms.js"></script>
+<script src="js/ui/components.js"></script>
+<script src="js/app.js"></script>
+<script src="js/ui/season-ui.js"></script>
+<script src="js/ui/market-ui.js"></script>
+<script src="js/ui/career-ui.js"></script>
+<script src="js/ui/life-ui.js"></script>
+<script src="js/ui/online-ui.js"></script>
+<!-- /build:scripts -->
+<script>
+MCM.app.start();
+// Instalación como app (solo en la versión alojada en su propia web, no dentro de un visor).
+if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost') && window.self === window.top) {
+  navigator.serviceWorker.register('sw.js').catch(function () {});
+}
+</script>
+</body>
+</html>
